@@ -1,4 +1,20 @@
 # 05 Third-Party APIs: Work Day Scheduler
+Dynamic Day Planner - html, css, javascript, jQuery. Create and Save day planner events.
+
+### Notes a.k.a Commits
+
+11/7 2:56PM - "index.html looking like Demo, need to recreate using javascript and make it dynamic. Researched Moment and new Luxon for hours. using Luxon for this assignment. have live date and time in page header"
+
+11/7 
+
+
+
+
+
+
+
+
+
 
 ## Your Task
 
