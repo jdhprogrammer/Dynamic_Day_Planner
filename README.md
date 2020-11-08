@@ -1,20 +1,21 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Dynamic Day Planner
+
+### 05 Third-Party APIs: Work Day Scheduler
 Dynamic Day Planner - html, css, javascript, jQuery. Create and Save day planner events.
+
+#### Developer: David Harris
+email: jdh.programmer@gmail.com - 
+github: https://github.com/jdhprogrammer
+
+Project Repository: https://github.com/jdhprogrammer/Dynamic_Day_Planner
+
+Project Deployment: https://jdhprogrammer.github.io/Dynamic_Day_Planner/
 
 ### Notes a.k.a Commits
 
 11/7 2:56PM - "index.html looking like Demo, need to recreate using javascript and make it dynamic. Researched Moment and new Luxon for hours. using Luxon for this assignment. have live date and time in page header"
 
 11/7 
-
-
-
-
-
-
-
-
-
 
 ## Your Task
 
@@ -60,62 +61,3 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses the Moment.js library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
