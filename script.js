@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function resetPlanner() {
 
+        let test = false;
+
         let date = new Date();
         let now = DateTime.local();
         let fancyDate = DateTime.local().toFormat('ffff');
@@ -14,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let thisHour12 = DateTime.local().toFormat('h');
         let currentHour = DateTime.local().toFormat('tt');
 
+        if (test) {
+            thisHour24 = 13;
+            thisHour12 = 1;
+        };
 
         let storedPlanner = JSON.parse(localStorage.getItem("storedPlanner"));
 
@@ -172,6 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentHourSpan.textContent = currentHour;
         };
         setInterval(updateTime, 1000);
+
 
 
         everyHourOnTheHour();
