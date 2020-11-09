@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let thisHour24 = DateTime.local().toFormat('H');
         let thisHour12 = DateTime.local().toFormat('h');
         let currentHour = DateTime.local().toFormat('tt');
+        let currentHourTest = false;
 
         if (test) {
             thisHour24 = 13;
@@ -127,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 hourSpan.className += " " + "currentHour";
                 hourSpan.textContent = currentHour;
+                currentHourTest = true;
             };
         };
 
@@ -173,9 +175,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             let dateTimeSubtitle = document.querySelector('#navbar-subtitle');
             dateTimeSubtitle.textContent = fancyDate;
-            let currentHour = DateTime.local().toFormat('tt');
-            let currentHourSpan = document.querySelector('.currentHour')
-            currentHourSpan.textContent = currentHour;
+
+            if (currentHourTest) {
+                let currentHour = DateTime.local().toFormat('tt');
+                let currentHourSpan = document.querySelector('.currentHour')
+                currentHourSpan.textContent = currentHour;
+            };
         };
         setInterval(updateTime, 1000);
 
