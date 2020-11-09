@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
             plansArray = storedPlanner;
         } else {
 
-            plansArray = new Array(9).fill(" ");
-            plansArray[0] = "Join Class Zoom Call!";
+            plansArray = new Array(24).fill(" ");
+            plansArray[10] = "Join Class Zoom Call!";
             // plansArray[1, 2, 3, 4, 5, 6, 7, 8] = [" ", " ", " ", " ", " ", " ", " ", " ", ]
 
         };
@@ -45,11 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
 
-        for (let hour = 9; hour <= 17; hour++) {
-            const i = hour - 9;
+        for (let hour = 0; hour <= 23; hour++) {
+            const i = hour;
 
-
-            var newRow = document.createElement("div");
+            let newRow = document.createElement("div");
             newRow.className = "row time-block";
             newRow.setAttribute("hour-value", i)
             planner.appendChild(newRow);
@@ -60,10 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
             hourSpan.setAttribute("hour-value", i)
             hourSpan.className = "hourSpan";
 
-            let hourText = 0;
+            let hourText = "";
             let amPm = "";
 
-            if (hour > 12) {
+            if (hour === 0) {
+                hourText = hour + 12 + ":00";
+                amPm = "AM";
+            } else if (hour > 12) {
                 hourText = hour - 12 + ":00 ";
                 amPm = "PM";
             } else if (hour === 12) {

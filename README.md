@@ -15,23 +15,26 @@ Project Deployment: http://www.jdhprogrammer.com/Dynamic_Day_Planner/
 
 11/7 2:56PM - "index.html looking like Demo, need to recreate using javascript and make it dynamic. Researched Moment and new Luxon for hours. using Luxon for this assignment. have live date and time in page header"
 
-11/7 
+-- really bad ad commiting when i get going for hours and hours. added lots of lines of JS. getting ideas and help on sections from different google searches and stack overflow. still had for me to write totally from scratch.
+
+-- all code written... currently debugging finding faults in javascript.
+
+-- 2nd time I have been working for 12 hours straight... and just forgot to go an submit Homework before Midnight.
+
+-- all Javascript working. page populating beautifully. had lots of bugs but found them all. added hover states, flashing save button, changed colors of items, etc.
+
+-- removed console logs and test flag from script.js... fixed reset every hour. everything working
+
+-- found a bug with live current hour label. fixed it.
+
+-- 
+
+
+
 
 ## Your Task
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use a library like [Moment.js](https://momentjs.com/) to work with dates and times. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. However, you can still use it for this project, or you can look into one of the following alternatives:
-
-  * [Luxon](https://moment.github.io/luxon/)
-
-  * [Day.js](https://day.js.org/)
-
-  * [date-fns](https://date-fns.org/)
-
-  * [js-Joda](https://js-joda.github.io/js-joda/)
-
-Whichever library you choose, be sure to read the documentation carefully!
+Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery or VanillaJS (~Dane - Instructor).
 
 
 ## User Story
@@ -61,62 +64,9 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+### Screenshots
 
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses the Moment.js library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the homework instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+![Screenshot of  Work Day Scheduler](Assets/Screenshots/Work_day_Scheduler.jpeg?raw=true "Word Day Scheduler, color coded rows and columns, 9am - 5pm, save buttons")
+![Screenshot of  Save button flashes yellow/orange](Assets/Screenshots/New_unsaved_planner_item_savebutton-flashing.jpeg?raw=true "Save button flashes yellow/orange")
+![Screenshot of  Save button saves to Local Storage](Assets/Screenshots/click_save_saves_localStorage.jpeg?raw=true "Save button saves to Local Storage")
+![Screenshot of  Current time diplayed in Current hour slot](Assets/Screenshots/current-time-displayed-in-curent-hour.jpeg?raw=true "Current time diplayed in Current hour slot")
