@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             thisHour12 = 1;
         };
 
+
         let storedPlanner = JSON.parse(localStorage.getItem("storedPlanner"));
 
 
@@ -67,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hourText = hour - 12 + ":00 ";
                 amPm = "PM";
             } else if (hour === 12) {
-                hourText = hour + ":00";
+                hourText = hour + ":00 ";
                 amPm = "PM";
             } else {
                 hourText = hour + ":00 ";
@@ -181,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
             dateTimeSubtitle.textContent = fancyDate;
 
             if (currentHourTest) {
-                let currentHour = DateTime.local().toFormat('tt');
+                let currentHour = DateTime.local().toFormat('t');
                 let currentHourSpan = document.querySelector('.currentHour')
                 currentHourSpan.textContent = currentHour;
             };

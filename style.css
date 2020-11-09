@@ -53,7 +53,7 @@
  }
  
  .hourSpan {
-     font-size: 1.7em;
+     font-size: 1em;
      font-weight: 900;
      display: inline-block;
      vertical-align: middle;
@@ -141,4 +141,29 @@
  
  .flashingSaveThis {
      animation: shadow-pulse 1s infinite;
+ }
+ 
+ @media screen and (min-width: 1001px) {
+     .hourSpan {
+         font-size: 1.75em;
+     }
+ }
+ 
+ @media screen and (max-width: 1000px) {
+     .hourSpan {
+         font-size: 1.5em;
+     }
+ }
+ 
+ @media screen and (max-width: 800px) {
+     .hourSpan {
+         font-size: 1.25em;
+     }
+ }
+ /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+ 
+ @media screen and (max-width: 600px) {
+     .hourSpan {
+         font-size: 1em;
+     }
  }

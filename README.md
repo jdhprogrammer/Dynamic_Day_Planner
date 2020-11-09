@@ -27,9 +27,7 @@ Project Deployment: http://www.jdhprogrammer.com/Dynamic_Day_Planner/
 
 -- found a bug with live current hour label. fixed it.
 
--- 
-
-
+-- Noticed 12:00pm was displaying as 12AM... fixed with additional if statement. Cleaned up README, added screenshots.
 
 
 ## Your Task
