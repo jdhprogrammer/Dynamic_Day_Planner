@@ -10,13 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
         let now = DateTime.local();
         let fancyDate = DateTime.local().toFormat('ffff');
 
+        let test = true;
+
         let thisHour24 = DateTime.local().toFormat('H');
         let thisHour12 = DateTime.local().toFormat('h');
         let currentHour = DateTime.local().toFormat('tt');
 
+        if (test) {
+            thisHour24 = 13;
+            thisHour12 = 1;
+        };
 
         let storedPlanner = JSON.parse(localStorage.getItem("storedPlanner"));
 
+        if (test) { console.log(storedPlanner); };
 
         // If plans were retrieved from localStorage, update the plan array to it
         if (storedPlanner !== null) {
@@ -29,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         };
 
+        if (test) { console.log("full array of plned text", plansArray); };
+
 
         let planner = document.querySelector("#thePlanner");
         clearContent();
@@ -36,6 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
         function clearContent() {
             document.querySelector("#thePlanner").innerHTML = "";
         }
+
+        if (test) { console.log("current time", thisHour12); }
+
+        // console.log(date);
+        // console.log(now)
+        // console.log(now.hour);
+        // console.log(fancyDate);
 
 
         for (let hour = 9; hour <= 17; hour++) {
@@ -93,32 +109,40 @@ document.addEventListener('DOMContentLoaded', function() {
             newRow.appendChild(saveBtnDiv);
             saveBtnDiv.appendChild(saveIcon);
 
-
+            // set row color based on time
             pastPresentFutureColor(newRow, hour);
             currentHourText(hourSpan, hour);
-
+            // add row to planner container
 
         };
 
 
         function pastPresentFutureColor(newRow, hour) {
+            // let newRowClass = newRow.getAttribute("class");
+            if (test) { console.log("rowColor ", thisHour24, hour); }
 
             if (hour < thisHour24) {
+                // $hourRow.css('')
+                if (test) { console.log("lessThan"); }
                 newRow.className += " " + "past";
             } else if (hour > thisHour24) {
+                if (test) { console.log("greaterThan"); }
                 newRow.className += " " + "future";
             } else {
+                if (test) { console.log("eqaul"); }
                 newRow.className += " " + "present";
             }
         };
 
         function currentHourText(hourSpan, hour) {
-
+            // let newRowClass = newRow.getAttribute("class");
             if (hour < thisHour24) {
+                // $hourRow.css('')
                 hourSpan.className = "hourSpan";
             } else if (hour > thisHour24) {
                 hourSpan.className = "hourSpan";
             } else {
+                // $hourRow.css('')
                 hourSpan.className += " " + "currentHour";
                 hourSpan.textContent = currentHour;
             };
@@ -132,6 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.preventDefault();
                 const targetIcon = event.target;
 
+                // if (test) { console.log('click pta before ' + plansArray); }
+
                 let index = targetIcon.getAttribute("save-Id");
 
                 let plannerInput = document.querySelector('#input-' + index);
@@ -139,6 +165,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 plansArray[index] = value;
 
+                if (test) { console.log('value ', value); };
+                if (test) { console.log('index ', index); };
+                if (test) { console.log('click pta after ' + plansArray); };
+
+                // remove shawdow pulse class
                 document.querySelector("#saveId-" + index).classList.remove("flashingSaveThis");
                 localStorage.setItem("storedPlanner", JSON.stringify(plansArray));
             });
@@ -147,14 +178,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let input = ".plannerInput";
         let inputs = document.querySelectorAll(input)
-
+            // function to color save button on change of input
         inputs.forEach(function(input) {
             input.addEventListener('change', function(event) {
                 event.preventDefault();
                 const targetInput = event.target;
 
+                if (test) { console.log('onChange'); }
+                if (test) { console.log('id', targetInput.getAttribute("hour-value")); }
+
+                // neeed to check for save button
+
                 let x = targetInput.getAttribute("hour-value");
 
+                // add shawdow pulse class
                 document.querySelector("#saveId-" + x).classList.add("flashingSaveThis");
             });
         });
@@ -177,9 +214,9 @@ document.addEventListener('DOMContentLoaded', function() {
         everyHourOnTheHour();
 
         function everyHourOnTheHour() {
-
-            var mins = DateTime.local().toFormat('mm' + 'ss');
-            if (mins == "0000") {
+            //get the mins of the current time
+            var mins = DateTime.local().toFormat('mm');
+            if (mins == "00") {
                 resetPlanner();
             };
         };
