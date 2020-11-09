@@ -9,7 +9,7 @@
      border: none;
      resize: none;
      color: #000000;
-     border-left: 1px solid black;
+     /* border-left: 1px solid black; */
      padding: 0px;
  }
  
@@ -40,29 +40,33 @@
  .row {
      white-space: pre-wrap;
      height: 80px;
-     border-top: 1px solid white;
+     border-top: 3px solid white;
  }
  
  .hour {
-     background-color: #ffffff;
+     background-color: #71e7f7;
      color: #000000;
-     border-top: 1px dashed #000000;
-     border-left: 1px dashed black;
-     border-radius: 15px 0px 0px 0px;
+     border-right: white 3px solid;
+     /* border-top: 1px dashed #000000;
+     border-left: 1px dashed black; */
+     border-radius: 15px 0px 0px 15px;
  }
  
  .hourSpan {
-     font-size: 1.2em;
-     font-weight: 700;
+     font-size: 1.8em;
+     font-weight: 900;
      display: inline-block;
      vertical-align: middle;
      width: 100%;
+     height: 100%;
+     margin-top: 22px;
+     margin-left: 0px;
  }
  
  .plannerInput {
      background: transparent;
      border: none;
-     padding-left: 3px;
+     padding-left: 20px;
      height: 100%;
      width: 100%;
  }
@@ -98,17 +102,16 @@
  }
  
  .saveBtn {
-     border-left: 1px solid black;
+     border-left: 3px solid white;
      border-top-right-radius: 15px;
      border-bottom-right-radius: 15px;
-     background-color: #06AED5;
+     background-color: #0c7cd9;
      color: white;
  }
- 
- .saveBtn:hover {
+ /* .saveBtn:hover {
      background-color: lightblue;
      transition: all .3s ease-in-out;
- }
+ } */
  /* .saveBtn i:hover {
      font-size: 20px;
      transition: all .3s ease-in-out;
@@ -129,13 +132,13 @@
  
  @keyframes shadow-pulse {
      0% {
-         box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+         color: rgba(251, 255, 29, 1);
      }
      100% {
-         box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+         color: rgba(252, 168, 14, 1);
      }
  }
  
- .shadowPulse {
+ .flashingSaveThis {
      animation: shadow-pulse 1s infinite;
  }
