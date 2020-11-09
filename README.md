@@ -29,6 +29,8 @@ Project Deployment: http://www.jdhprogrammer.com/Dynamic_Day_Planner/
 
 -- Noticed 12:00pm was displaying as 12AM... fixed with additional if statement. Cleaned up README, added screenshots.
 
+-- worked on making hour block text responsive. added screenshots of said-project.
+
 
 ## Your Task
 
@@ -68,3 +70,5 @@ THEN the saved events persist
 ![Screenshot of  Save button flashes yellow/orange](Assets/Screenshots/New_unsaved_planner_item_savebutton-flashing.jpeg?raw=true "Save button flashes yellow/orange")
 ![Screenshot of  Save button saves to Local Storage](Assets/Screenshots/click_save_saves_localStorage.jpeg?raw=true "Save button saves to Local Storage")
 ![Screenshot of  Current time diplayed in Current hour slot](Assets/Screenshots/current-time-displayed-in-curent-hour.jpeg?raw=true "Current time diplayed in Current hour slot")
+![Screenshot of  Hour Slot Text getting Wonky](Assets/Screenshots/text-not-repsonsive-to-xs-screen.jpeg?raw=true "Hour Slot Text getting Wonky")
+![Screenshot of  Hour Slot Text Responding when page Shrinks](Assets/Screenshots/hour-text-RESPONSIVE.jpeg?raw=true "Hour Slot Text Responding when page Shrinks")
