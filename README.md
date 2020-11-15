@@ -1,6 +1,5 @@
 # Dynamic Day Planner 
 
-:raising_hand:
 
 ### 05 Third-Party APIs: Work Day Scheduler
 Dynamic Day Planner - html, css, javascript, jQuery. Create and Save day planner events.
